@@ -20,7 +20,7 @@ const corsOptions = {
   origin: `http://localhost:${Config.CLIENT_PORT}`,
 };
 
-app.use(express.json({ limit: "2mb" }));
+app.use(express.json());
 app.use(cors(corsOptions));
 
 routes.push(new ShoppingList(app));
