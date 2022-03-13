@@ -13,7 +13,7 @@ class ShoppingListMiddleware {
       next();
     } else {
       res.status(404).send({
-        error: `List with id ${req.params.id} not found`,
+        error: `List with id ${req.params.listId} not found`,
       });
     }
   }
@@ -31,7 +31,7 @@ class ShoppingListMiddleware {
       next();
     } else {
       res.status(404).send({
-        error: `Item with id ${req.params.id} not found`,
+        error: `Item with id ${req.params.listId} not found`,
       });
     }
   }
