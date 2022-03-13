@@ -18,6 +18,9 @@ const routes: Routes[] = [];
 
 const corsOptions = {
   origin: `http://localhost:${Config.CLIENT_PORT}`,
+  methods: "GET,PUT,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
 };
 
 app.use(express.json());
